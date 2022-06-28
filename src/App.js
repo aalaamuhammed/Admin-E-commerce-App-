@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Home from "./pages/Home";
+import { Routes, Route } from "react-router-dom";
+import CategoryList from "./pages/UsersList";
+import Sider from "./components/Sider";
+import ProductList from "./pages/ProductList";
+import ProductForm from "./pages/ProductForm";
+import CheckOut from "./pages/CheckOut";
+import UsersList from "./pages/UsersList";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+      }}
+    >
+      <Sider />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/CategoryList" element={<CategoryList />} />
+        <Route
+          path="/ProductList/:categoryId/:categoryName"
+          element={<ProductList />}
+        />
+        <Route path="/ProductForm" element={<ProductForm />} />
+        <Route path="/CheckOut" element={<CheckOut />} />
+        <Route path="/User" element={<UsersList />} />
+        {/* <Route path="ProductForm" element={<ProductForm />} /> */}
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
