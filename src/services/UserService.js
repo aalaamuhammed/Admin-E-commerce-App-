@@ -1,7 +1,7 @@
 import instance from "./AxiosInstance";
-export async function getUser(categoryId) {
+export async function getUser() {
   try {
-    const response = await instance.get(`/user?categoryId=${categoryId}`);
+    const response = await instance.get(`/user`);
     return response.data;
   } catch (error) {
     console.log(error);

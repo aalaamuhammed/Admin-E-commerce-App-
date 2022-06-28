@@ -26,7 +26,7 @@ export const GetColumns = ({
     {
       title: "Number of Orders",
       dataIndex: "numOfOrders",
-      width: "15%",
+      width: "20%",
       editable: true,
     },
     {
@@ -36,7 +36,7 @@ export const GetColumns = ({
       editable: true,
     },
     {
-      title: "operation",
+      title: "Operation",
       dataIndex: "operation",
       width: "10%",
       render: (_, record) => {
@@ -81,6 +81,7 @@ export const GetColumns = ({
                   type="primary"
                   style={{
                     borderRadius: 5,
+                    margin: "0px 10px",
                   }}
                   ghost
                   disabled={editingKey !== ""}

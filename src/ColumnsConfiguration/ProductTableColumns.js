@@ -1,4 +1,4 @@
-import { Button, Popconfirm, Typography } from "antd";
+import { Button, Popconfirm } from "antd";
 
 export const GetColumns = ({
   save,

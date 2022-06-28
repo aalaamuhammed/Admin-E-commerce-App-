@@ -1,12 +1,10 @@
 import React from "react";
-import { Form, Popconfirm, Table, Typography, Button, Alert } from "antd";
+import { Form, Table, Alert } from "antd";
 import { useState, useEffect } from "react";
-import { MarginSize, PaddingSize, FontSize } from "../assets/Sizes";
-import { Colors } from "../assets/Colors";
+import { MarginSize } from "../assets/Sizes";
 import EditableTableCell from "../components/EditableTableCell";
 import { GetColumns } from "../ColumnsConfiguration/UserTableColumns";
 import { DeleteUser, getUser, updateUser } from "../services/UserService";
-import { useNavigate, useParams } from "react-router-dom";
 import { AddToCart } from "../services/CartService";
 
 function UsersList() {
@@ -18,10 +16,8 @@ function UsersList() {
   const [message, setMessage] = useState("");
   const [type, setType] = useState("");
   const [description, setDescription] = useState("");
-  const { categoryId, categoryName } = useParams();
-  const navigate = useNavigate();
   const fetchData = async () => {
-    const data = await getUser(categoryId);
+    const data = await getUser();
     setUsers(data);
   };
   useEffect(() => {
@@ -82,7 +78,7 @@ function UsersList() {
   };
 
   return (
-    <div>
+    <div style={{ flex: 1 }}>
       <div
         style={{
           flex: 1,

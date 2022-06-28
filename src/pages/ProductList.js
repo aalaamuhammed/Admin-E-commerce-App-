@@ -1,7 +1,6 @@
-import { Form, Popconfirm, Table, Typography, Button, Alert } from "antd";
+import { Form, Table, Button, Alert } from "antd";
 import { useState, useEffect } from "react";
-import { MarginSize, PaddingSize, FontSize } from "../assets/Sizes";
-import { Colors } from "../assets/Colors";
+import { MarginSize } from "../assets/Sizes";
 import EditableTableCell from "../components/EditableTableCell";
 import { GetColumns } from "../ColumnsConfiguration/ProductTableColumns";
 import {
@@ -88,7 +87,7 @@ const App = () => {
     navigate("/ProductForm");
   };
   return (
-    <div>
+    <div style={{ flex: 1 }}>
       <div
         style={{
           flex: 1,

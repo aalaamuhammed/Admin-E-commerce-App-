@@ -1,6 +1,6 @@
-import { Form, Popconfirm, Table, Typography, Button, Alert } from "antd";
+import { Form, Popconfirm, Table, Typography, Alert } from "antd";
 import { useState, useEffect } from "react";
-import { MarginSize, PaddingSize, FontSize } from "../assets/Sizes";
+import { MarginSize, PaddingSize } from "../assets/Sizes";
 import { Colors } from "../assets/Colors";
 import EditableTableCell from "../components/EditableTableCell";
 import {
