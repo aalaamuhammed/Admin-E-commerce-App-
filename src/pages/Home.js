@@ -23,7 +23,10 @@ const Home = () => {
         overflowY: "scroll",
       }}
     >
-      <CategorySlider data={categories} />
+      <div style={{ display: "flex", flex: 1, justifyContent: "center" }}>
+        <CategorySlider data={categories} />
+      </div>
+
       {/* Header */}
       <div
         style={{
