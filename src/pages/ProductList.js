@@ -87,7 +87,7 @@ const App = () => {
     navigate("/ProductForm");
   };
   return (
-    <div style={{ flex: 1 }}>
+    <div style={{ flex: 1, overflowY: "scroll" }}>
       <div
         style={{
           flex: 1,
